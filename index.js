@@ -56,7 +56,9 @@ server.post('/generate', (req, res) => {
 		fetch(apiUrl, requestOptions)
 			.then(response => response.text())
 			.then(result => {
-			   res.status(200).json(result);
+			   const parsedResult = JSON.parse(result); 
+			   const beautifiedJson = JSON.stringify(parsedResult, null, 2); 
+			   res.status(200).send(beautifiedJson);
 			  
 			})
 			.catch(error => {
