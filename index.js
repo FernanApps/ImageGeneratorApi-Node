@@ -36,7 +36,8 @@ server.post('/generate', (req, res) => {
     } else {
 		
 	  const prompt = req.body.prompt;
-	  var myHeaders = new Headers();
+	  var myHeaders = new fetch.Headers();
+
 		myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
 		myHeaders.append("Authorization", "Bearer " + apiKeyGeneratorMain);
 
