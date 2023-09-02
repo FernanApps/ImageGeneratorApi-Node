@@ -9,5 +9,8 @@
     "cross-fetch": "^4.0.0",
     "dotenv": "^16.3.1",
     "express": "^4.17.1"
+  },
+  "Scripts": {
+	"start": "node index.js"
   }
 }
