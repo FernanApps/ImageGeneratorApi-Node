@@ -36,6 +36,9 @@ server.post('/generate', (req, res) => {
     } else {
 		
 	  const prompt = req.body.prompt;
+	  const model = req.body.prompt || 'art';
+
+	  
 	  var myHeaders = new fetch.Headers();
 
 		myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
@@ -43,7 +46,7 @@ server.post('/generate', (req, res) => {
 
 		var urlencoded = new URLSearchParams();
 		urlencoded.append("prompt", prompt);
-		urlencoded.append("key2", "");
+		urlencoded.append("model", model);
 		urlencoded.append("key3", "");
 
 		var requestOptions = {
