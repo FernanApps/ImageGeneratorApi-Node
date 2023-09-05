@@ -47,7 +47,7 @@ server.post('/generate', (req, res) => {
 		var urlencoded = new URLSearchParams();
 		urlencoded.append("prompt", prompt);
 		urlencoded.append("model", model);
-		urlencoded.append("key3", "");
+		urlencoded.append("key3", "a");
 
 		var requestOptions = {
 		  method: 'POST',
