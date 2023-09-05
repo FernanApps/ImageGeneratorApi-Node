@@ -53,7 +53,8 @@ server.post('/generate', (req, res) => {
 		  method: 'POST',
 		  headers: myHeaders,
 		  body: urlencoded,
-		  redirect: 'follow'
+		  redirect: 'follow',
+		  timeout: 120000
 		};
 
 		fetch(apiUrl, requestOptions)
